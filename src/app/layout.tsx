@@ -28,14 +28,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[1920px] mx-auto`}
       >
-        <header>
-          <Navbar />
-        </header>
-        <main className="bg-slate-100">
-          {children}
-        </main>
+        <div className="grid grid-cols-6 min-h-screen">
+          <header className="col-span-1 pl-4">
+            <Navbar />
+          </header>
+          <main className="bg-slate-100 col-span-4">
+            {children}
+          </main>
+        </div>
         <footer className="bg-slate-400">
           <Footer />
         </footer>
